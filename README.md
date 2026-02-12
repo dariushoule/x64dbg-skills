@@ -17,6 +17,14 @@ Compares two state snapshots to identify what changed between two points in time
 - Memory region modifications (stack writes, heap mutations, code changes)
 - Synthesized narrative explaining what the program did between snapshots
 
+### `/decompile`
+
+Decompiles a function to C-like pseudocode using [angr](https://angr.io/):
+- Decompiles the function at the current instruction pointer if no address is specified
+- Accepts a specific address or symbol as an argument
+- Tries multiple decompiler strategies for best results
+- Suggests nearby functions if the specified address isn't a function entry
+
 ## Prerequisites
 
 - [x64dbg](https://x64dbg.com/) installed
@@ -24,6 +32,10 @@ Compares two state snapshots to identify what changed between two points in time
 - Python 3 with the `x64dbg_automate` pip package installed:
   ```
   pip install x64dbg_automate[mcp] --upgrade
+  ```
+- For the `/decompile` skill: [angr](https://pypi.org/project/angr/) (Python >= 3.10):
+  ```
+  pip install angr
   ```
 
 ## Installation
