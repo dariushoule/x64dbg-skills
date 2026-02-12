@@ -15,6 +15,7 @@ Claude Code plugin providing skills for x64dbg debugger automation.
 - `/state-diff` — Compares two snapshots and explains what changed
 - `/decompile` — Decompiles a function to C pseudocode via angr
 - `/yara-sigs` — Scans snapshot memory dumps with YARA signatures (packers, crypto, anti-debug, etc.)
+- `/tracealyzer` — Traces execution and analyzes the recorded instruction log
 
 ## Key Patterns
 

@@ -33,6 +33,15 @@ Scans snapshot memory dumps with [YARA](https://virustotal.github.io/yara/) sign
 - Builds on `/state-snapshot` — uses an existing snapshot or takes a fresh one
 - Reports matches grouped by rule with memory region addresses and metadata
 
+### `/tracealyzer`
+
+Traces execution (into or over calls) for N steps or until a condition is met, then analyzes the recorded instruction log:
+- Configurable trace mode: step **into** calls or step **over** calls
+- Stop on a max instruction count, an x64dbg expression (e.g. `cip == 0x401000`), or both
+- Captures a full instruction log to `traces/` with addresses, disassembly, labels, and comments
+- Summarizes execution flow, hot spots, API calls, loops, and notable patterns
+- Follow-up actions: annotate key addresses in x64dbg, deeper sub-region analysis, deobfuscation
+
 ## Prerequisites
 
 - [x64dbg](https://x64dbg.com/) installed
@@ -69,7 +78,7 @@ To update to the latest version:
 
 ## Usage
 
-A decent guide that gives good ideas on how to use these skills: [Cooking with x64dbg and MCP](https://x64.ooo/posts/2025-02-12-cooking-with-x64dbg-and-mcp)
+A decent guide that gives good ideas on how to use these skills: [Cooking with x64dbg and MCP](https://x64.ooo/posts/2026-02-12-cooking-with-x64dbg-and-mcp)
 
 ## License
 
