@@ -44,7 +44,7 @@ Traces execution (into or over calls) for N steps or until a condition is met, t
 
 ## Prerequisites
 
-- [x64dbg](https://x64dbg.com/) installed
+- [x64dbg](https://x64dbg.com/) and [x64dbg Automate](https://dariushoule.github.io/x64dbg-automate-pyclient/installation/) installed
 - [x64dbg MCP server](https://dariushoule.github.io/x64dbg-automate-pyclient/mcp-server/) configured in Claude Code
 - Python 3 with the `x64dbg_automate` pip package installed:
   ```
